@@ -15,11 +15,17 @@ const studentSchema = new Schema(
             type: String,
             required: true,
             unique: true,
-            lowercase: true
+            lowercase: true,
+            trim: true,
+            index: true
         },
         name: {
             type: String,
             required: true,
+            index: true,
+        },
+        image: {
+            type: String,
         },
         date_of_birth: {
             type: String,

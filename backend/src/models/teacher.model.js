@@ -6,11 +6,17 @@ const teacherSchema = new Schema(
             type: String,
             required: true,
             lowecase: true,
-            unique: true
+            unique: true,
+            trim: true,
+            index: true
         },
         name: {
             type: String,
             required: true,
+            index: true
+        },
+        image: {
+            type: String,
         },
         subject: {
             type: String,

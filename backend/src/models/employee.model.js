@@ -11,6 +11,10 @@ const employeeSchema = new Schema(
         name: {
             type: String,
             required: true,
+            index: true
+        },
+        image: {
+            type: String,
         },
         Department: {
             type: String,

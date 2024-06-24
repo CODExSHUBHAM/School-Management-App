@@ -4,20 +4,29 @@ const userSchema = new Schema(
     {
         name: {
             type: String,
-            required: true
+            required: true,
+            index: true
         },
         email: {
             type: String,
-            required: true
+            required: true,
+            trim: true,
+            lowercase: true
         },
         password: {
             type: String,
             required: true
         },
+        image: {
+            type: String,
+        },
         role: {
             type: String,
             enum: ["ADMIN", "EMPLOYEE", "TEACHER", "STUDENT"],
             required: true
+        },
+        refreshToken: {
+            type: String
         }
     },
     { timestamps: true }
