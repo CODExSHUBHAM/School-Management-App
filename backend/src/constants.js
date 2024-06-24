@@ -1,3 +1,1 @@
-const PORT = 3000
-
-export default PORT;
+export const DB_NAME = 'schooldb'
